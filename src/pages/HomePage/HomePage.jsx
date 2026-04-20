@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { ArtContext } from '../../context/ArtContext'
+import ArtworkCard from '../../components/ArtworkCard/ArtworkCard'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
+import styles from './HomePage.module.css'
 
 function HomePage() {
   const { artworks, loading, error } = useContext(ArtContext)
@@ -9,12 +11,14 @@ function HomePage() {
   if (error) return <p>Error: {error}</p>
 
   return (
-    <div>
-      <h2>Colección</h2>
-      {artworks.map(artwork => (
-        <p key={artwork.id}>{artwork.title}</p>
-      ))}
-    </div>
+    <main className={styles.main}>
+      <h2 className={styles.heading}>Colección</h2>
+      <div className={styles.grid}>
+        {artworks.map(artwork => (
+          <ArtworkCard key={artwork.id} artwork={artwork} />
+        ))}
+      </div>
+    </main>
   )
 }
 

@@ -1,0 +1,19 @@
+.main {
+  padding: 2rem;
+  background-color: #111;
+  min-height: 100vh;
+}
+
+.heading {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
