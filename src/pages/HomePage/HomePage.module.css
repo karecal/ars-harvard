@@ -1,5 +1,5 @@
 .main {
-  padding: 2rem;
+  padding: var(--padding-page);
   background-color: #111;
   min-height: 100vh;
 }
@@ -14,7 +14,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: var(--grid-columns);
   gap: 1.5rem;
 }
 
@@ -22,4 +22,11 @@
   color: #aaa;
   font-size: 1rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
 }

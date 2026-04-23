@@ -1,5 +1,6 @@
-import { useContext, useState, useMemo } from 'react'
+import { useState, useMemo, useContext } from 'react'
 import { ArtContext } from '../../context/ArtContext'
+import useArtworks from '../../hooks/useArtworks'
 import ArtworkCard from '../../components/ArtworkCard/ArtworkCard'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 import SearchBar from '../../components/SearchBar/SearchBar'
@@ -7,7 +8,8 @@ import Pagination from '../../components/Pagination/Pagination'
 import styles from './HomePage.module.css'
 
 function HomePage() {
-  const { artworks, loading, error, classifications, cultures, departments, page, setPage, totalPages } = useContext(ArtContext)
+const { artworks, loading, error, page, setPage, totalPages } = useArtworks()
+const { classifications, cultures, departments } = useContext(ArtContext)
 
   const [filters, setFilters] = useState({
     query: '',
@@ -90,11 +92,7 @@ function HomePage() {
           ))}
         </div>
       )}
-      <Pagination
-        page={page}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
+      <Pagination page={page} totalPages={totalPages} onPageChange={handlePageChange} />
     </main>
   )
 }

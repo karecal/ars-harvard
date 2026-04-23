@@ -1,8 +1,12 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #111;
+  padding: 1rem var(--padding-page);
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #222;
 }
 
 .logo {
@@ -11,4 +15,10 @@
   font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.1rem;
+  }
 }

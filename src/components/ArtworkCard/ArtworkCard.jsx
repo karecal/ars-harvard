@@ -11,7 +11,11 @@ function ArtworkCard({ artwork }) {
   const imageUrl = artwork.primaryimageurl
 
   return (
-    <div className={styles.card} onClick={handleClick}>
+    <div
+      className={styles.card}
+      onClick={handleClick}
+      style={{ border: '1px solid #222' }}
+    >
       {imageUrl ? (
         <img src={imageUrl} alt={artwork.title} className={styles.image} />
       ) : (
