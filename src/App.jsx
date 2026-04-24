@@ -4,17 +4,31 @@ import Navbar from './components/Navbar/Navbar'
 import HomePage from './pages/HomePage/HomePage'
 import ArtworkDetailPage from './pages/ArtworkDetailPage/ArtworkDetailPage'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import LoginPage from './pages/LoginPage/LoginPage'
+import Footer from './components/Footer/Footer'
+import AboutPage from './pages/AboutPage/AboutPage'
+import TeamPage from './pages/TeamPage/TeamPage'
+import FaqPage from './pages/FaqPage/FaqPage'
+import ContactPage from './pages/ContactPage/ContactPage'
+import NewsletterPage from './pages/NewsletterPage/NewsletterPage'
 
 function App() {
   return (
-    <ArtProvider>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/artwork/:id" element={<ArtworkDetailPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </ArtProvider>
+ <ArtProvider>
+  <Navbar />
+  <Routes>
+    <Route path="/" element={<HomePage />} />
+    <Route path="/artwork/:id" element={<ArtworkDetailPage />} />
+    <Route path="/login" element={<LoginPage />} />
+    <Route path="*" element={<NotFoundPage />} />
+    <Route path="/about" element={<AboutPage />} />
+    <Route path="/team" element={<TeamPage />} />
+    <Route path="/faq" element={<FaqPage />} />
+    <Route path="/contact" element={<ContactPage />} />
+    <Route path="/newsletter" element={<NewsletterPage />} />
+  </Routes>
+  <Footer />
+</ArtProvider>
   )
 }
 

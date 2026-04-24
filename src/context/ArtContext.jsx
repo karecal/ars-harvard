@@ -10,16 +10,42 @@ function ArtProvider({ children }) {
   const [error, setError] = useState(null)
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(0)
+  const [filters, setFilters] = useState({
+    query: '',
+    classification: '',
+    culture: '',
+    department: '',
+    sort: '',
+    yearFrom: '',
+    yearTo: '',
+    hasImage: true
+  })
 
   const API_KEY = import.meta.env.VITE_API_KEY
   const API_URL = import.meta.env.VITE_API_URL
 
+  const hasActiveFilters = Object.entries(filters).some(([key, value]) => {
+    if (key === 'hasImage') return false
+    return value !== ''
+  })
+
   useEffect(() => {
     setLoading(true)
-    fetch(`${API_URL}/object?apikey=${API_KEY}&hasimage=1&size=${PAGE_SIZE}&page=${page}`)
+
+    let url = `${API_URL}/object?apikey=${API_KEY}&hasimage=1&size=${PAGE_SIZE}&page=${page}`
+
+    if (filters.query) url += `&q=${encodeURIComponent(filters.query)}`
+    if (filters.classification) url += `&classification=${encodeURIComponent(filters.classification)}`
+    if (filters.culture) url += `&culture=${encodeURIComponent(filters.culture)}`
+    if (filters.department) url += `&department=${encodeURIComponent(filters.department)}`
+    if (filters.yearFrom) url += `&yearmade=${filters.yearFrom}`
+    if (filters.sort === 'asc') url += `&sort=datebegin&sortorder=asc`
+    if (filters.sort === 'desc') url += `&sort=datebegin&sortorder=desc`
+
+    fetch(url)
       .then(res => res.json())
       .then(data => {
-        setArtworks(data.records)
+        setArtworks(data.records || [])
         setTotalPages(data.info?.pages || 0)
         setLoading(false)
       })
@@ -27,7 +53,7 @@ function ArtProvider({ children }) {
         setError(err.message)
         setLoading(false)
       })
-  }, [page])
+  }, [page, filters])
 
   const classifications = useMemo(() => {
     const values = artworks.map(a => a.classification).filter(Boolean)
@@ -44,11 +70,32 @@ function ArtProvider({ children }) {
     return [...new Set(values)].sort()
   }, [artworks])
 
+  const handleFilterChange = (key, value) => {
+    setPage(1)
+    setFilters(prev => ({ ...prev, [key]: value }))
+  }
+
+  const handleReset = () => {
+    setPage(1)
+    setFilters({
+      query: '',
+      classification: '',
+      culture: '',
+      department: '',
+      sort: '',
+      yearFrom: '',
+      yearTo: '',
+      hasImage: true
+    })
+  }
+
   return (
     <ArtContext.Provider value={{
       artworks, loading, error,
       classifications, cultures, departments,
-      page, setPage, totalPages
+      page, setPage, totalPages,
+      filters, handleFilterChange, handleReset,
+      hasActiveFilters
     }}>
       {children}
     </ArtContext.Provider>
