@@ -167,16 +167,50 @@
   color: #fff;
 }
 
-@media (max-width: 600px) {
+@@media (max-width: 600px) {
   .searchRow {
     flex-direction: column;
+    align-items: stretch;
   }
 
-  .filtersBtn {
+  .input,
+  .filtersBtn,
+  .resetBtn {
     width: 100%;
+    box-sizing: border-box;
+  }
+
+  .panel {
+    padding: 1rem;
   }
 
   .panelGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .group {
+    width: 100%;
+  }
+
+  .select,
+  .yearInput {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .yearRange {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .filtersBtn,
+  .resetBtn {
+    justify-content: center;
   }
 }

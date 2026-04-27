@@ -11,10 +11,12 @@ import TeamPage from './pages/TeamPage/TeamPage'
 import FaqPage from './pages/FaqPage/FaqPage'
 import ContactPage from './pages/ContactPage/ContactPage'
 import NewsletterPage from './pages/NewsletterPage/NewsletterPage'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 function App() {
   return (
  <ArtProvider>
+  <ScrollToTop />
   <Navbar />
   <Routes>
     <Route path="/" element={<HomePage />} />
