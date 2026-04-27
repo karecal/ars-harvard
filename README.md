@@ -244,8 +244,6 @@ Durante el desarrollo de este proyecto se utilizó **Claude (Anthropic)** y **Ch
 - Generación de componentes y estilos CSS
 - Configuración del entorno de testing
 
-## 🌐 Deploy https://tu-proyecto.vercel.app
-
 ---
 
 ## 👩‍💻 Autoría
