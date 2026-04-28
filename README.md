@@ -168,55 +168,55 @@ A continuación se muestra una estimación del tiempo planificado frente al tiem
 ### 🧱 Estructura base del proyecto
 
 - **Estimado:** 3h
-- **Real:** 4h
+- **Real:** 3h
 - Creación del proyecto con Vite, configuración inicial, estructura de carpetas y primeras dependencias.
 
 ---
 
 ### 🧭 Navegación (React Router + páginas)
 
-- **Estimado:** 6h
-- **Real:** 8h
+- **Estimado:** 5h
+- **Real:** 6h
 - Configuración de rutas y creación de páginas principales (Home, Detail, Login, FAQ, About, etc.).
 
 ---
 
 ### 🎨 Layout y componentes UI
 
-- **Estimado:** 10h
-- **Real:** 14h
+- **Estimado:** 8h
+- **Real:** 10h
 - Desarrollo de componentes como Navbar, Footer, ArtworkCard, Modal, LoadingSpinner y diseño general.
 
 ---
 
 ### 🔎 Búsqueda y filtros (SearchBar + lógica)
 
-- **Estimado:** 8h
-- **Real:** 12h
+- **Estimado:** 6h
+- **Real:** 8h
 - Implementación de búsqueda, filtros por categoría, cultura, departamento, ordenación y control de estado.
 
 ---
 
 ### 🌐 Consumo de API (Harvard Art Museums)
 
-- **Estimado:** 6h
-- **Real:** 7h
+- **Estimado:** 5h
+- **Real:** 6h
 - Integración de la API, gestión de datos, paginación y manejo de errores.
 
 ---
 
-### ⚡ Optimización (debounce + useMemo)
+### ⚡ Optimización y rendimiento
 
-- **Estimado:** 3h
-- **Real:** 4h
-- Implementación de debounce para búsquedas y optimización de renders con useMemo.
+- **Estimado:** 2h
+- **Real:** 3h
+- Optimización de consultas, memoización con `useMemo` y mejora de renders.
 
 ---
 
 ### 🧪 Testing
 
-- **Estimado:** 4h
-- **Real:** 5h
+- **Estimado:** 3h
+- **Real:** 4h
 - Configuración de Vitest y React Testing Library, creación de tests para ArtworkCard y SearchBar.
 
 ---
@@ -224,15 +224,15 @@ A continuación se muestra una estimación del tiempo planificado frente al tiem
 ### 🎨 Responsive y ajustes finales
 
 - **Estimado:** 4h
-- **Real:** 6h
-- Ajustes de diseño responsive, corrección de bugs visuales y mejoras de UX.
+- **Real:** 5h
+- Adaptación a dispositivos móviles, corrección de bugs visuales y mejoras de experiencia de usuario.
 
 ---
 
 ### 📌 Total
 
-- **Tiempo estimado total:** ~44h
-- **Tiempo real total:** ~60h (5 días de trabajo)
+- **Tiempo estimado total:** ~36h
+- **Tiempo real total:** ~45h (5 días de desarrollo)
 
 ## 🤖 Uso de Inteligencia Artificial
 
