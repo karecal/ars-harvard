@@ -161,78 +161,107 @@ npm run test
 npm run build
 ```
 
+---
+
 ## ⏱️ Tiempos de desarrollo
 
-A continuación se muestra una estimación del tiempo planificado frente al tiempo real invertido en cada parte del proyecto.
+A continuación se muestra una estimación del tiempo planificado frente al tiempo real invertido en cada parte del proyecto, distribuido a lo largo de cinco jornadas de trabajo.
 
-### 🧱 Estructura base del proyecto
+### 📅 Día 1 — Configuración inicial y arquitectura
 
-- **Estimado:** 3h
-- **Real:** 3h
-- Creación del proyecto con Vite, configuración inicial, estructura de carpetas y primeras dependencias.
+- **Estructura base del proyecto**
+  - Estimado: 2h
+  - Real: 2h
 
----
+- **Configuración inicial (Vite, dependencias, ESLint, variables de entorno)**
+  - Estimado: 2h
+  - Real: 2h
 
-### 🧭 Navegación (React Router + páginas)
+- **Arquitectura de carpetas y componentes base**
+  - Estimado: 2h
+  - Real: 2h
 
-- **Estimado:** 5h
-- **Real:** 6h
-- Configuración de rutas y creación de páginas principales (Home, Detail, Login, FAQ, About, etc.).
-
----
-
-### 🎨 Layout y componentes UI
-
-- **Estimado:** 8h
-- **Real:** 10h
-- Desarrollo de componentes como Navbar, Footer, ArtworkCard, Modal, LoadingSpinner y diseño general.
+**Total Día 1:** 6h
 
 ---
 
-### 🔎 Búsqueda y filtros (SearchBar + lógica)
+### 📅 Día 2 — Navegación y páginas
 
-- **Estimado:** 6h
-- **Real:** 8h
-- Implementación de búsqueda, filtros por categoría, cultura, departamento, ordenación y control de estado.
+- **Configuración de React Router**
+  - Estimado: 2h
+  - Real: 2h
 
----
+- **Creación de páginas principales**
+  - Estimado: 3h
+  - Real: 3h
 
-### 🌐 Consumo de API (Harvard Art Museums)
+- **Página 404 y ScrollToTop**
+  - Estimado: 1h
+  - Real: 1h
 
-- **Estimado:** 5h
-- **Real:** 6h
-- Integración de la API, gestión de datos, paginación y manejo de errores.
-
----
-
-### ⚡ Optimización y rendimiento
-
-- **Estimado:** 2h
-- **Real:** 3h
-- Optimización de consultas, memoización con `useMemo` y mejora de renders.
+**Total Día 2:** 6h
 
 ---
 
-### 🧪 Testing
+### 📅 Día 3 — Componentes UI y diseño
 
-- **Estimado:** 3h
-- **Real:** 4h
-- Configuración de Vitest y React Testing Library, creación de tests para ArtworkCard y SearchBar.
+- **Navbar y Footer**
+  - Estimado: 2h
+  - Real: 2h
+
+- **ArtworkCard y listado de obras**
+  - Estimado: 3h
+  - Real: 3h
+
+- **LoadingSpinner y Modal**
+  - Estimado: 1h
+  - Real: 1h
+
+**Total Día 3:** 6h
 
 ---
 
-### 🎨 Responsive y ajustes finales
+### 📅 Día 4 — API, búsqueda y filtros
 
-- **Estimado:** 4h
-- **Real:** 5h
-- Adaptación a dispositivos móviles, corrección de bugs visuales y mejoras de experiencia de usuario.
+- **Integración con Harvard Art Museums API**
+  - Estimado: 2h
+  - Real: 2h
+
+- **SearchBar y búsqueda por Enter**
+  - Estimado: 2h
+  - Real: 2h
+
+- **Filtros, ordenación y paginación**
+  - Estimado: 2h
+  - Real: 2h
+
+**Total Día 4:** 6h
 
 ---
 
-### 📌 Total
+### 📅 Día 5 — Testing, responsive y despliegue
 
-- **Tiempo estimado total:** ~36h
-- **Tiempo real total:** ~45h (5 días de desarrollo)
+- **Testing con Vitest y React Testing Library**
+  - Estimado: 2h
+  - Real: 2h
+
+- **Responsive y ajustes finales**
+  - Estimado: 3h
+  - Real: 3h
+
+- **Deploy en Vercel y documentación**
+  - Estimado: 1h
+  - Real: 1h
+
+**Total Día 5:** 6h
+
+---
+
+### 📌 Resumen total
+
+- **Tiempo estimado total:** 30h
+- **Tiempo real total:** 30h
+- **Duración del desarrollo:** 5 días (6 horas diarias)
 
 ## 🤖 Uso de Inteligencia Artificial
 
